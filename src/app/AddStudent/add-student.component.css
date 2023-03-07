@@ -1,0 +1,16 @@
+.form-content{
+  margin: 20px;
+  border-width: medium;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: grey;
+  padding: 20px;
+  background-color: #C8E9E9;
+  width: 35%;
+  height: 70%;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* centering the div */
+}

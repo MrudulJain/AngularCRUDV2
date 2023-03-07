@@ -1,0 +1,32 @@
+<router-outlet></router-outlet>
+
+<div class="form-content">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="addStudModalLabel">Enter Student Details</h5>
+      <button type="button" class="btn-close" (click)="onClickClose()" aria-label="Close"></button>
+    </div>
+    <br>
+    <div class="modal-body">
+      <form [formGroup] = "formValue">
+        <div class="mb-3">
+          <label for="inputNameForm" class="form-label">Full Name</label>
+          <input type="text" formControlName="fullName" class="form-control" id="inputNameForm" aria-describedby="privacyHelp" required>
+          <div id="privacyHelp"  class="form-text">We'll never share personal details with anyone else</div>
+        </div>
+        <div class="mb-3">
+          <label for="inputEmailForm" class="form-label">Email</label>
+          <input type="email" formControlName="email" class="form-control" id="inputEmailForm" aria-describedby="emailHelp" required>
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="inputPhoneForm" class="form-label">Phone Number</label>
+          <input type="text" formControlName="phoneNo" class="form-control" id="inputPhoneForm" pattern="[+][0-9]{3}-[0-9]{2}-[0-9]{3}" ria-describedby="privacyHelp" required>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" (click)="postStudentDetails()" class="btn btn-primary">Add Student</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2 style="color: aliceblue;"> Angular StudentDB Crud </h2>
+        <div class="d-flex">
+            <!-- This button redirects to a new page -->
+            <button type="button" (click)="onClickAdd()" button class="btn btn-success"> Add Student Record </button>
+        </div>
+    </div>
+</nav>
+
+<table class="table mt-3" > <!-- Bootstrap table class, top margin(mt) = 3-->
+    <thead>
+        <tr>
+            <th scope="col"> Student Id</th>
+            <th scope="col"> Full Name </th>
+            <th scope="col"> Email Id</th>
+            <th scope="col"> Mobile Number</th>
+            <th scope="col"> Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of studData">
+          <td>{{row.id}}</td>
+          <td>{{row.fullName}}</td>
+          <td>{{row.email}}</td>
+          <td>{{row.phoneNo}}</td>
+          <td>
+            <button type="button" (click)="onClickEdit(row.id)" class="btn btn-info"> Edit </button>
+            <button (click)="deleteStudent(row)" class="btn btn-danger mx-2"> Delete </button>
+          </td>
+        </tr>
+    </tbody>
+</table>
+
+  <!-- Mock data for table row -->
+  <!--
+    <tr>
+      <td><input type="checkbox" /></td>
+      <td> 1</td>
+      <td> Mrudul Jain</td>
+      <td> mrudul.jain@nielseniq.com</td>
+      <td> 9876543210</td>
+      <td>
+          <button class="btn btn-info"> Edit </button>
+          <button class="btn btn-danger mx-2"> Delete</button>
+      </td>
+  </tr>
+-->

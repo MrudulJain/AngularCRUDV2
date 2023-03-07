@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "fullName": "Test1",
+      "email": "abc@123.com",
+      "phoneNo": "1234"
+    },
+    {
+      "id": 3,
+      "fullName": "Mrudul Jain",
+      "email": "mrudul.jain@nielseniq.com",
+      "phoneNo": 888888888
+    },
+    {
+      "id": 4,
+      "fullName": "Test_3",
+      "email": "test333",
+      "phoneNo": "500-600-700"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
